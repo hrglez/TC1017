@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int d1,d2,s,d,p,id,dr;
+cout<<"Hello, please enter two integer values\n"<<"Put the first one here ";
+cin >> d1;
+cout<<"Now the second one, come on: ";
+cin >> d2;
+s=d1+d2;
+d=d1-d2;
+p=d1*d2;
+id=d1/d2;
+dr=d1%d2;
+cout<<"The sum of the two numbers is " <<s <<"\nThe difference between the two numbers is "<<d <<"\nThe product on the two numbers is "<<p <<"\nThe";
+return 0;
+}
