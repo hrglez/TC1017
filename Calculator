@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+main ()
+
+{
+
+float dato1, dato2,opcion,respuesta;
+
+cout<<"Bienvenido este programa es una calculadora de operaciones basicas a continuacion las opciones\n\n";
+cout<<"1 - Suma\n";
+cout<<"2 - Resta\n\n";
+cout<<"Introduce la opcion deseada y presiona ENTER\n";
+cin>>opcion;
+
+     	if(opcion==1)
+
+{
+cout<<" SUMA \n";
+cout<<"Introduce sumando 1: ";
+cin>>dato1;
+cout<<"Introduce sumando 2: ";
+cin>>dato2;
+respuesta=dato1+dato2;
+cout<<"La suma de "<<dato1<<" + "<<dato2<<" = "<<respuesta<<endl;
+}
+
+
+if(opcion==2)
+{
+cout<<"RESTA\n";
+cout<<"Introduce minuendo: ";
+cin>>dato1;
+cout<<"Introduce sustraendo: ";
+cin>>dato2;
+respuesta=dato1-dato2;
+cout<<"La resta de "<<dato1<<" - "<<dato2<<" = "<<respuesta<<endl;
+}
+}
