@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+main ()
+
+{
+int grade;
+
+cout<<"Give me a grade (between 0 and 100), and I am going to tell you if you approved or not\n";
+cin>>grade;
+
+	if(grade>=70)
+	{
+		cout<<"You approved, congratulations!"<<endl;
+	}
+	else
+	{
+		cout<<"Sorry, you disapproved"<<endl;
+	}
+	return 0;
+}
