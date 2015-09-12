@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+int main()
+{
+  float tf,tc;
+cout<<"Hello, this program converts temperature in Farenheit to Celsius\n"<<"What is the temperature in Farenheit? ";
+cin >> tf;
+tc=5*(tf-32)/9;
+cout<<"A temperature of "<<tf <<" degrees Farenheit is " <<setprecision(4)<<tc <<" in Celsius.\nThanks." ;
+return 0;
+}
