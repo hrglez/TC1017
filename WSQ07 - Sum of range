@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int lb,ub,r,x,y;
+  cout<<"Hello this program make the sum of the numbers in a range\n"<<"Enter the lower bound: ";
+  cin>>lb;
+  cout<<"Enter the upper bound: ";
+  cin>>ub;
+  y = 0;
+  for (x=lb;x<=ub;x++)
+  {
+    y = y + x;
+  }
+  cout<<"The sum from "<<lb<<" to "<<ub<<" is "<<y;
+  return 0;
+}
