@@ -6,7 +6,7 @@ int main()
 {
   int secret, guess, times;
   srand(time(0));
-  secret = rand()%101;
+  secret = rand()%100+1;
 cout<<"Hello, I have a number chosen between 1 and 100\n"<<"Try to guess it: ";
 cin>> guess;
 for(times=1; guess!=secret; times++)
