@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+void stars(int n){
+int i;
+for(i=1;i<=n;i++){
+  cout<<'*';
+}
+cout<<endl;
+}
+
+int main(){
+int n;
+cin>>n;
+stars(n);
+return 0;
+}
