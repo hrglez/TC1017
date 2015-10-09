@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+long superPower(long a, long b){
+  long r=1,i=1;
+  for(i;i<=b;i++){
+  r=r*a;
+  }
+  return r;
+}
+int main(){
+int r,v,w;
+cout<<"Give me two numbers: ";
+cin>>v>>w;
+r=superPower(v,w);
+cout<<r<<endl;
+  return 0;
+}
