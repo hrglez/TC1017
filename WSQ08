@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int sum(int x, int y)
+{
+  int z;
+  z=x+y;
+  return z;
+}
+int difference(int x, int y)
+{
+  int z;
+  z=x-y;
+  return z;
+}
+int product(int x, int y)
+{
+  int z;
+  z=x*y;
+  return z;
+}
+int division(int x, int y)
+{
+  int z;
+  z=x/y;
+  return z;
+}
+int remainder(int x, int y)
+{
+  int z;
+  z=x%y;
+  return z;
+}
+
+int main()
+{
+  int d1,d2,s,d,p,id,dr;
+cout<<"Hello, please enter two integer values\n"<<"Put the first one here ";
+cin >> d1;
+cout<<"Now the second one, come on: ";
+cin >> d2;
+s=sum(d1,d2);
+d=difference(d1,d2);
+p=product(d1,d2);
+id=division(d1,d2);
+dr=remainder(d1,d2);
+cout<<"The sum of the two numbers is " <<s <<"\nThe difference between the two numbers is "<<d <<"\nThe product on the two numbers is "<<p <<"\nThe integer based division of the two numbers is " <<id <<"\nThe remainder of the integer division is "<<dr <<endl;
+return 0;
+}
