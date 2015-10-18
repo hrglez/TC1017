@@ -1,0 +1,46 @@
+#include <iostream>
+#include "BigIntegerLibrary.hh"
+using namespace std;
+
+BigInteger factorial(BigInteger n){
+BigInteger x;
+x=1;
+  do{
+    x=x*n;
+    n--;
+    } while(n>=1);
+    return x;
+}
+
+int main()
+{
+BigInteger n,x,y;
+string s;
+char o;
+  do{
+    cout<<"Hello, please enter one non-negative integer value: ";
+    cin >> s;
+    n = stringToBigInteger(s);
+
+    if(n>=0)
+    {
+        if(n==0)
+        {
+          x=1;
+        }
+        else{
+      x = factorial (n);
+            }
+            cout<<"The factorial of that number is: "<<x<<endl;
+      }
+    else{
+        cout<<"I told you to use non-negative numbers, do not be mean"<<endl;
+        }
+cout<<"If you want to try with another number enter 'y', if not, enter 'n'. ";
+cin>>o;
+}while(o=='y'||o=='Y');
+if (o=='n'||o=='N'){
+  cout<<"Have a nice day, see you!"<<endl;
+}
+return 0;
+}
