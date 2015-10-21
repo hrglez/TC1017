@@ -1,0 +1,49 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+double total(vector<int> x){
+  int s=x.size(),i;
+  double t;
+    for(i=0;i<s;i++){
+    t= t+x[i];
+    }
+    return t;
+}
+
+double avr(vector<int> x){
+  double t,a;
+  int s= x.size();
+  t= total(x);
+  a= t/s;
+  return a;
+}
+
+double stdDev(vector<int> x){
+  int i,s=x.size();
+  double a,ss=0,sd;
+  a=avr(x);
+    for(i=0;i<s;i++){
+      ss= ss + (x[i]-a)*(x[i]-a);
+    }
+    sd= sqrt(ss/s);
+    return sd;
+  }
+
+int main(){
+  vector<int> v(10);
+  int s=v.size(),x,t;
+  double a,sd;
+cout<<"Enter ten integer and non negative numbers:"<<endl;
+    for(int i=0;i<s;i++){
+    cin>>x;
+    v[i]=x;
+    }
+t= total(v);
+a= avr(v);
+sd= stdDev(v);
+cout<<"The sum of the numbers is: "<<t<<endl;
+cout<<"The average of the numbers is: "<<a<<endl;
+cout<<"The standard deviation of the numbers is: "<<sd<<endl;
+}
