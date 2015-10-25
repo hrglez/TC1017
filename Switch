@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int sum(int x, int y)
+{
+  int z;
+  z=x+y;
+  return z;
+}
+int difference(int x, int y)
+{
+  int z;
+  z=x-y;
+  return z;
+}
+int product(int x, int y)
+{
+  int z;
+  z=x*y;
+  return z;
+}
+
+int main(){
+  int d1,d2,o,r;
+  cout<<"Hello, please enter two integer values\n"<<"Put the first one here ";
+  cin >> d1;
+  cout<<"Now the second one, come on: ";
+  cin >> d2;
+  cout<<"Enter an option"<<endl;
+  cout<<"1.Sum\n2.Difference\n3.Product"<<endl;
+  cin >> o;
+switch(o){
+case 1: r=sum(d1,d2);
+      break;
+case 2: r=difference(d1,d2);
+      break;
+case 3: r=product(d1,d2);
+      break;
+}
+    cout<<"The result is "<<r<<endl;
+return 0;
+}
