@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int i,x,y;
+  int array[7]={0,7,3};  //This array called 'array' have three spaces, filled with zero's.
+  int array2[3]={1,2,3}; //This array2 have three spaces, with the numbers 1, 2 and 3.
+  cout<<"The values in array are: ";
+  for(i=0;i<7;i++){   //In vectors I used size() to find the size of the vector, using arrays it is complicate to din the length.
+  cout<<array[i]<<", ";
+    }
+  cout<<endl<<"The values in array2 are: ";
+    for(i=0;i<3;i++){
+    cout<<array2[i]<<", ";
+      }
+return 0;
+}
