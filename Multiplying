@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int a,f,m,z;
+  cout<<"Give me a factor: ";
+  cin>>f;
+  cout<<"Enter the upper bound: ";
+  cin>>m;
+  for(a=0;a<=m;a++){
+  cout<<f<<" X "<<a<<" = "<<f*a;
+  z=f*a;
+      if(z%2==0) cout<<" Pair\n";
+      else cout<<" Odd\n";
+  }
+  }
