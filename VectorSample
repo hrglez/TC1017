@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+  int i,x,y;
+  vector<int> v;      //This is how you declare a vector: vector<type> name(SpacesInTheVector, VariableWichAppearsInEverySpace)
+  vector<int> z(4,3);  //This vector called 'x' have four spaces with three's. Four three's.
+  cout<<"Enter seven numbers to v"<<endl;
+  for(i=0;i<7;i++){
+  cin>>x;    //I'm filling spaces in v, seven spaces as you can see in the for
+  v.push_back(x);    //The variable i starts in zero because the vector will have seven spaces: 0,1,2,3,4,5,6. It starts in zero
+  }
+  cout<<"Put another value in the vector x:"<<endl;
+  cin>>y;
+  z.push_back(y);  //push_back() is used to put another value in the vector, at the end.
+  cout<<"The size of the vector v is: "<<v.size()<<endl;
+  cout<<"The size of the vector x is: "<<z.size()<<endl;
+  cout<<"The values in v are: ";
+  for(i=0;i<v.size();i++){
+  cout<<v[i]<<", ";
+    }
+  cout<<endl<<"The values in x are: ";
+    for(i=0;i<z.size();i++){
+    cout<<z[i]<<", ";
+      }
+return 0;
+}
