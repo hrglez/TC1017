@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+void MtoF(void){
+float m,f;
+cout<<"Enter the meters: ";
+cin>>m;
+f=m*3.28;
+cout<<m<<" meters are "<<f<<" feets"<<endl;
+}
+
+void FtoM(void){
+  float m,f;
+  cout<<"Enter the feets: ";
+  cin>>f;
+  m=f*.3;
+  cout<<f<<" feets are "<<m<<" meters"<<endl;
+}
+
+void GtoP(void){
+  float g,p;
+  cout<<"Enter the grams: ";
+  cin>>g;
+  p=g*.0022;
+  cout<<g<<" grams are "<<p<<" pounds"<<endl;
+}
+
+void PtoG(void){
+  float g,p;
+  cout<<"Enter the pounds: ";
+  cin>>p;
+  g=p*453.59;
+  cout<<p<<" pounds are "<<g<<" grams"<<endl;
+}
+
+int main(){
+  int o;
+cout<<"Choose an option: "<<endl;
+cout<<"1.Meters to feet\n2.Feet to Meters\n3.Grams to pounds\n4.Pounds to grams"<<endl;
+cin>>o;
+  switch (o){
+    case 1: MtoF(); break;
+    case 2: FtoM(); break;
+    case 3: GtoP(); break;
+   case 4: PtoG(); break;
+  }
+  return 0;
+}
