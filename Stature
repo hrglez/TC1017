@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(){
+  int i;
+  int array[3];
+  vector<float> v(3);
+  cout<<"Enter the ages of three persons: ";
+      for(i=0;i<3;i++){
+        cin>>array[i];
+      }
+    cout<<"Enter the stature of the three persons (in meters): ";
+          for(i=0;i<3;i++){
+            cin>>v[i];
+          }
+
+  cout<<"The person 1 is "<<array[0]<<" years old and the stature is "<<v[0]<<" meters"<<endl;
+  cout<<"The person 2 is "<<array[1]<<" years old and the stature is "<<v[1]<<" meters"<<endl;
+  cout<<"The person 3 is "<<array[2]<<" years old and the stature is "<<v[2]<<" meters"<<endl;
+return 0;
+}
