@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+int m;
+
+cout<<"Bienvenido, este programa indica las frutas de temporada\n"<<"Ingrese el número de mes (enero=1;diciembre=12) ";
+cin>>m;
+
+if(m>=1&&m<=12)
+{
+	     if(m>=1 && m<=3)
+         {
+	     cout<<"Aguacate\n"<<"Acelga\n"<<"Calabaza\n"<<"Col\n"<<"Coliflor\n"<<"Espinaca\n"<<"Jitomate\n"<<"Lechuga\n"<<"Zanahoria\n";
+	     }
+	     if(m>=4 && m<=6)
+         {
+	     cout<<"Acelga\n"<<"Calabaza\n"<<"Chayote\n"<<"Chicharos\n"<<"Cilantro\n"<<"Ejote\n"<<"Jitomate\n"<<"Lechuga\n"<<"Nopales\n"<<"Pepino\n";
+
+	     }
+	     if(m>=7 && m<=9)
+         {
+	     cout<<"Calabaza\n"<<"Coliflor\n"<<"Chicharos\n"<<"Chile Poblano\n"<<"Cilantro\n"<<"Ejote\n"<<"Jitomate\n"<<"Lechuga\n"<<"Zanahoria\n";
+
+	     }
+	     if(m>=10 && m<=12)
+         {
+	     cout<<"Acelga\n"<<"Alcachofa\n"<<"Berenjena\n"<<"Calabaza\n"<<"Col\n"<<"Espinaca\n"<<"Zanahoria\n";
+
+	     }
+
+}
+else
+{
+cout<<"El mes debe estar entre 1 y 12"<<endl;
+}
+return 0;
+}
