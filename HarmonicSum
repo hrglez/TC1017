@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+int n,p,s;
+cout<<"Hi, this program make a harmonic sum of integers from zero to (you decide, enter the upper bound here): ";
+cin>>p;
+      for (n=0;n<=p;n++)
+     	{
+     	cout<<"\n"<<s<<" + "<<n<<" = "<<s+n;
+	    s=s+n;
+     	}
+    return 0;
+}
