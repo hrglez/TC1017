@@ -1,0 +1,87 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include "BigIntegerLibrary.hh"
+using namespace std;
+
+bool palindrome(string x){
+  int i,l;
+  l=x.length();
+  for(i=0;i<l;i++){
+      if(x[i]==x[l-(i+1)]){
+        continue;
+      } else {
+        return false;
+      }
+    }
+    return true;
+}
+
+BigInteger invert(string s){
+  string t;
+  BigInteger nv;
+  int l=s.length(),i;
+    t = s;
+      for(i=0;i<l;i++){
+        t[i]=s[l-i-1];
+      }
+    nv= stringToBigInteger(t);
+    return nv;
+}
+
+vector<int> lychrels(string a, string b){
+  string x,y,ox;
+  BigInteger lb = stringToBigInteger(a);
+  BigInteger ub = stringToBigInteger(b);
+  BigInteger v,nv;
+  int i,l,nap,lyp,lyc=0;
+  vector<int> r(3);
+  for(lb;lb<=ub;lb++){
+    x = bigIntegerToString(lb);
+    l = x.length();
+      if(palindrome(x)==true){
+        nap++;
+      } else {
+          ox=x;
+            for(i=0;i<=30;i++){
+            nv=invert(x);
+            v = stringToBigInteger(x);
+            v=v+nv;
+            x = bigIntegerToString(v);
+              if (palindrome(x)==true){
+                lyp++;
+                break;
+              }
+              else {
+                continue;
+              }
+          }
+          if(i==31){
+             cout<<"I found a lycherel number: "<<ox<<endl;
+             lyc++;
+           }
+    }
+  }
+  r[0]=nap;
+  r[1]=lyp;
+  r[2]=lyc;
+  return r;
+}
+
+
+int main(){
+string lb,ub;
+vector<int> r(3);
+cout<<"You are going to see some serious shit.\nGive me an integer number wich is going to be a lower bound: ";
+cin>>lb;
+cout<<"Now the upper bound: ";
+cin>>ub;
+cout<<endl;
+r= lychrels(lb,ub);
+cout<<endl<<"In a range from "<<lb<<" to "<<ub<<". The results are:"<<endl;
+cout<<"Natural palindromes: "<<r[0] <<endl;
+cout<<"Lychrels numbers become palindromes: "<<r[1] <<endl;
+cout<<"Lychrels candidates: "<<r[2] <<endl;
+cout<<endl<<"This program calculates using 30 iterations. All rights not reserved."<<endl;
+return 0;
+}
