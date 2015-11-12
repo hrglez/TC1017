@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b){
+int r,x,y,s;
+  if(a>b){
+    x=a;
+    y=b;
+  }
+  if(a<b){
+    x=b;
+    y=a;
+  }
+  if(a==b){
+    s=a;
+  }
+  r=x%y;
+      while(r!=0){
+        r=x%y;
+        x=y;
+        y=r;
+        s=r;
+        r=x%y;
+      }
+      if(r==0) s=y;
+return s;
+}
+
+int main(){
+int x,y,r;
+cout<<"Enter two integer values: ";
+cin>>x;
+cin>>y;
+r=gcd(x,y);
+cout<<"The greatest common divisor for those numbers is "<<r<<endl;
+return 0;
+}
