@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+double babylon(int x){
+  double r=x;
+      while ((r-x/r)/2>0.000001){
+          r= (r+x/r)/2;
+      }
+  return r;
+}
+
+int main(){
+  int n;
+  double r;
+cout<<"Enter a number: ";
+cin>>n;
+r=babylon(n);
+cout<<"The square root (by Babylonian Method) is: "<<r<<endl;
+return 0;
+}
