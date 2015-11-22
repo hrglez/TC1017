@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main(){
+  ifstream text("text.txt");
+  string line;
+  int i,x,l,c;
+    while(true){
+      getline(text,line);
+      l=line.length();
+      for(x=0;x<l;x++){
+            if(line[x]=='b'||line[x]=='B'){
+              if(line[x+1]=='a'||line[x+1]=='A'){
+                if(line[x+2]=='n'||line[x+2]=='N'){
+                  if(line[x+3]=='a'||line[x+3]=='A'){
+                    if(line[x+4]=='n'||line[x+4]=='N'){
+                      if(line[x+5]=='a'||line[x+5]=='A'){
+                        i++;
+                      }
+                    }
+                  }
+                }
+              }
+            } else{
+              continue;
+            }
+      }
+      if (text.eof()) break;
+    }
+    cout<<"The file txt.txt has the word 'banana' "<<i<<" times."<<endl;
+  return 0;
+}
